@@ -1,0 +1,28 @@
+#wrapper {
+    .h2, h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .h3, h3 {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    section.portlet {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
+.menu-toggle {
+    @at-root {
+        .has-control-menu & {
+            margin-top: 48px;
+
+            @include media-breakpoint-up(md) {
+                margin-top: 56px;
+            }
+        }
+    }
+}

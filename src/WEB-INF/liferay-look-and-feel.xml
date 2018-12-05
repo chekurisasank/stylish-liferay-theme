@@ -6,6 +6,11 @@
 		<version>7.1.0+</version>
 	</compatibility>
 	<theme id="stylish" name="stylish">
+		<settings>
+			<setting configurable="true" key="show-logo-image" type="checkbox" value="false" />
+			<setting configurable="true" key="show-example-content" type="checkbox" value="true" />
+			<setting configurable="true" key="show-footer" type="checkbox" value="true" />
+		</settings>
 		<template-extension>ftl</template-extension>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>

@@ -4,3 +4,33 @@
 /* endinject */
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+@import "vendor/stylish/variables";
+@import "vendor/stylish/mixins";
+@import "vendor/stylish/masthead";
+@import "vendor/stylish/sidebar";
+@import "vendor/stylish/footer";
+
+@import "vendor/simple-line-icons/css/simple-line-icons.css";
+@import "vendor/fontawesome-free/css/all.css";
+
+#wrapper {
+    // firt lines from global.scss
+    body, html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        @include body-font;
+    }
+
+    @import "vendor/stylish/global";
+    @import "vendor/stylish/services";
+    @import "vendor/stylish/callout";
+    @import "vendor/stylish/portfolio";
+    @import "vendor/stylish/bootstrap-overrides";
+}
+
+// some fixed to adapt the theme to lifeary portal
+@import "liferay_fixes";
