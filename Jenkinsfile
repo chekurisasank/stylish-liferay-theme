@@ -5,11 +5,15 @@ node {
      sh "git rev-parse --short HEAD > .git/commit-id"                        
      commit_id = readFile('.git/commit-id').trim()
    }
+   
    stage('test') {
-     nodejs(nodeJSInstallationName: 'nodejs') {
+     def myTestContainer = docker.image('node:4.6')
+     myTestContainer.pull()
+     myTestContainer.inside {
        sh'npm config set registry http://registry.npmjs.org/'
        sh 'npm install --only=dev'
        sh 'npm test'
      }
    }
+   
  }
