@@ -16,4 +16,13 @@ node {
      }
    }
    
+   stage('build') {
+	   def myBildContainer = docker.image('node:4.6')
+	   myBildContainer.pull()
+	   myBildContainer.inside{
+		   sh 'npm install'
+		   sh "gulp build "
+	   }  
+   }
+   
  }
