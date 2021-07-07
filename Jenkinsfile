@@ -9,7 +9,7 @@ node {
   
    
    stage('build') {
-	   def myBildContainer = docker.image('node:4.6')
+	   def myBildContainer = docker.image('node:10.9')
 	   myBildContainer.pull()
 	   myBildContainer.inside{
 		   sh 'npm config set strict-ssl false'
