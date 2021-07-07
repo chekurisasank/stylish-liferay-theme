@@ -13,7 +13,7 @@ node {
 	   myBildContainer.pull()
 	   myBildContainer.inside{
 		   sh 'npm config set strict-ssl false'
-		   sh 'npm config set registry http://registry.npmjs.org/'
+		   //sh 'npm config set registry http://registry.npmjs.org/'
 		   sh 'npm install'
 		   sh "gulp build "
 	   }  
