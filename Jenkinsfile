@@ -7,6 +7,7 @@ node {
    }
    stage('test') {
      nodejs(nodeJSInstallationName: 'nodejs') {
+       sh'npm config set registry http://registry.npmjs.org/'
        sh 'npm install --only=dev'
        sh 'npm test'
      }
