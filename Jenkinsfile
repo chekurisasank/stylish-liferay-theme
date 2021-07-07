@@ -10,7 +10,7 @@ node {
      def myTestContainer = docker.image('node:4.6')
      myTestContainer.pull()
      myTestContainer.inside {
-       sh'npm config set registry http://registry.npmjs.org/'
+       sh 'npm config set registry http://registry.npmjs.org/'
        sh 'npm install --only=dev'
        sh 'npm test'
      }
